@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxpqo6gghp24m"]
+
+[ext_resource type="Script" path="res://file_dialog.gd" id="1_qyl7v"]
+
+[node name="FileDialog" type="FileDialog"]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(600, 400)
+visible = true
+always_on_top = true
+use_native_dialog = true
+script = ExtResource("1_qyl7v")
+
+[connection signal="canceled" from="." to="." method="_on_canceled"]
+[connection signal="file_selected" from="." to="." method="_on_file_selected"]
